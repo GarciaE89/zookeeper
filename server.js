@@ -1,10 +1,12 @@
  const express = require('express');
  const {animals} = require('./data/animals');
 
+ const PORT = process.env.PORT || 3001;
+
  const app = express();
 
- app.listen(3001, () => {
-     console.log(`API server is on port 3001!, ya hurd`);
+ app.listen(PORT, () => {
+     console.log(`API server is on port ${PORT}, ya hurd`);
  });
 
 function filterByQuery(query, animalsArray) {
